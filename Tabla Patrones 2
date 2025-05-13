@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Esquemas de prompts</title>
+<style>
+  body { font-family: sans-serif; padding: 20px; }
+  h1 { text-align: center; color: #333; }
+  table { border-collapse: collapse; width: 100%; font-size: 14px; }
+  th, td { border: 1px solid #888; padding: 10px; text-align: left; vertical-align: top; }
+  th { background-color: #ddd; }
+</style>
+</head>
+<body>
+<h1>Esquemas de prompts</h1>
+<table>
+  <tr><th>Grupo</th><th>Patrón</th><th>Función</th><th>Ejemplo en un prompt</th></tr>
+
+  <!-- Mejora del prompt -->
+  <tr style="background-color: #fef3b3">
+    <td rowspan="4"><b>Mejora del prompt</b></td>
+    <td>Refinamiento de preguntas (Question Refinement)</td>
+    <td>Ayuda a mejorar preguntas para que sean más claras y específicas.</td>
+    <td>¿Cómo puedo mejorar esta pregunta para obtener una respuesta más precisa?</td>
+  </tr>
+  <tr style="background-color: #fef3b3">
+    <td>Enfoques alternativos (Alternative Approaches)</td>
+    <td>Propone distintas maneras de abordar un problema para comparar opciones.</td>
+    <td>Proponé tres formas diferentes de enseñar historia medieval en la universidad.</td>
+  </tr>
+  <tr style="background-color: #fef3b3">
+    <td>Verificador cognitivo (Cognitive Verifier)</td>
+    <td>Divide problemas complejos en partes más simples y manejables.</td>
+    <td>Dividí el proceso de planificación de una clase en etapas.</td>
+  </tr>
+  <tr style="background-color: #fef3b3">
+    <td>Reformulación ante negativa (Refusal Breaker)</td>
+    <td>Reformula preguntas rechazadas para que sean aceptables y respondibles.</td>
+    <td>Si esta pregunta no se puede responder, ofrecé una versión reformulada del tema.</td>
+  </tr>
+
+  <!-- Verificación -->
+  <tr style="background-color: #ffd1dc">
+    <td rowspan="2"><b>Verificación y control de calidad</b></td>
+    <td>Lista de verificación de hechos (Fact Check List)</td>
+    <td>Incluye una lista de hechos o datos en los que se basó la respuesta.</td>
+    <td>Dame la respuesta y luego una lista con los hechos usados para construirla.</td>
+  </tr>
+  <tr style="background-color: #ffd1dc">
+    <td>Reflexión (Reflection)</td>
+    <td>Explica el razonamiento detrás de la respuesta dada por el modelo.</td>
+    <td>Incluí una reflexión sobre cómo llegaste a esta conclusión.</td>
+  </tr>
+
+  <!-- Control de contexto -->
+  <tr style="background-color: #b5ead7">
+    <td rowspan="1"><b>Control de contexto</b></td>
+    <td>Gestor de contexto (Context Manager)</td>
+    <td>Establece un marco temático o disciplinar que guía toda la conversación.</td>
+    <td>Todas tus respuestas deben centrarse en la historia argentina del siglo XIX.</td>
+  </tr>
+
+  <!-- Interacción -->
+  <tr style="background-color: #c7ceea">
+    <td rowspan="3"><b>Interacción</b></td>
+    <td>Interacción invertida (Flipped Interaction)</td>
+    <td>El modelo hace preguntas al usuario para guiar la conversación.</td>
+    <td>Haceme preguntas para ayudarme a diseñar una clase sobre pensamiento crítico.</td>
+  </tr>
+  <tr style="background-color: #c7ceea">
+    <td>Juego (Game Pattern)</td>
+    <td>Convierte la interacción en una dinámica lúdica o juego educativo.</td>
+    <td>Hagamos un juego de preguntas y respuestas sobre geografía.</td>
+  </tr>
+  <tr style="background-color: #c7ceea">
+    <td>Generación infinita (Infinite Generation)</td>
+    <td>Genera contenido continuo hasta que el usuario decida detenerse.</td>
+    <td>Generá ideas de títulos para clases de comunicación hasta que diga ‘basta’.</td>
+  </tr>
+
+  <!-- Personalización -->
+  <tr style="background-color: #ffdac1">
+    <td rowspan="7"><b>Personalización de salida</b></td>
+    <td>Personaje (Role Pattern)</td>
+    <td>Hace que el modelo responda desde el rol de un profesional o experto.</td>
+    <td>Actuá como un docente universitario de biología y explicá la fotosíntesis.</td>
+  </tr>
+  <tr style="background-color: #ffdac1">
+    <td>Estilo del personaje (Persona Pattern)</td>
+    <td>Ajusta el tono o estilo comunicativo del modelo.</td>
+    <td>Respondé con un tono empático y cercano, como un tutor universitario.</td>
+  </tr>
+  <tr style="background-color: #ffdac1">
+    <td>Automatizador de salidas (Output Automater)</td>
+    <td>Crea respuestas repetibles con formato definido.</td>
+    <td>Generá comentarios de retroalimentación siguiendo el formato: Fortalezas - Debilidades - Recomendación.</td>
+  </tr>
+  <tr style="background-color: #ffdac1">
+    <td>Visualizador (Visualization Generator)</td>
+    <td>Crea descripciones visuales o contenido convertible en gráficos o esquemas.</td>
+    <td>Describí gráficamente cómo funciona el sistema circulatorio.</td>
+  </tr>
+  <tr style="background-color: #ffdac1">
+    <td>Perfil del público (Audience Persona)</td>
+    <td>Ajusta el mensaje según el nivel y características del destinatario.</td>
+    <td>Explicá qué es una célula como si se lo contaras a un estudiante de secundaria.</td>
+  </tr>
+  <tr style="background-color: #ffdac1">
+    <td>Receta (Recipe Pattern)</td>
+    <td>Organiza la información como una secuencia de pasos.</td>
+    <td>Dame una receta paso a paso para armar una clase invertida.</td>
+  </tr>
+  <tr style="background-color: #ffdac1">
+    <td>Plantilla (Template Pattern)</td>
+    <td>Sigue un formato preestablecido para estructurar la respuesta.</td>
+    <td>Completá esta plantilla: Tema – Objetivo – Actividad – Evaluación.</td>
+  </tr>
+
+  <!-- Razonamiento lógico -->
+  <tr style="background-color: #ff9aa2">
+    <td rowspan="4"><b>Razonamiento lógico</b></td>
+    <td>Ejemplos guiados (Few-shot Examples)</td>
+    <td>Incluye ejemplos dentro del prompt para mostrar cómo debe responder el modelo.</td>
+    <td>A partir de estos ejemplos, respondé de la misma manera a la nueva pregunta.</td>
+  </tr>
+  <tr style="background-color: #ff9aa2">
+    <td>Cadena de pensamiento (Chain of Thought)</td>
+    <td>Expone el razonamiento paso a paso antes de dar la respuesta final.</td>
+    <td>Pensá en voz alta antes de responder este problema de lógica.</td>
+  </tr>
+  <tr style="background-color: #ff9aa2">
+    <td>Razonamiento y acción (ReAct Prompting)</td>
+    <td>Primero analiza y luego actúa o decide con base en ese análisis.</td>
+    <td>Analizá este problema de convivencia en clase y luego proponé soluciones.</td>
+  </tr>
+  <tr style="background-color: #ff9aa2">
+    <td>Expansión de esquemas (Outline Expansion)</td>
+    <td>Desarrolla un esquema o índice en un contenido amplio y estructurado.</td>
+    <td>Expandí este esquema en un texto sobre técnicas de estudio: Técnica - ¿Para qué sirve? - ¿En qué consiste? - Ejemplo de uso</td>
+  </tr>
+
+  <!-- Flujo -->
+  <tr style="background-color: #e2f0cb">
+    <td rowspan="3"><b>Manejo de interacción y flujo</b></td>
+    <td>Solicitud de datos (Ask for Input)</td>
+    <td>Pide datos al usuario antes de continuar con la respuesta.</td>
+    <td>Antes de responder, preguntame a qué público va dirigido el texto.</td>
+  </tr>
+  <tr style="background-color: #e2f0cb">
+    <td>Menú (Menu Pattern)</td>
+    <td>Ofrece opciones para que el usuario elija cómo continuar la conversación.</td>
+    <td>Elegí entre estas opciones para empezar: A) Evaluación B) Actividades C) Motivación.</td>
+  </tr>
+  <tr style="background-color: #e2f0cb">
+    <td>Generación encadenada (Tail Generation)</td>
+    <td>Cada respuesta se basa en la anterior, como en una serie progresiva.</td>
+    <td>Generá la primera parte de una serie de clases. Luego seguirás con la siguiente.</td>
+  </tr>
+
+  <!-- Filtro ético -->
+  <tr style="background-color: #a0ced9">
+    <td rowspan="1"><b>Filtro ético o temático</b></td>
+    <td>Filtro semántico (Semantic Filter)</td>
+    <td>Evita contenido inadecuado excluyendo temas, enfoques o lenguaje no deseado.</td>
+    <td>Generá una historia para niños sin violencia ni lenguaje ofensivo.</td>
+  </tr>
+  
+  <!-- Control de semántica -->
+  <tr style="background-color: #d5a6bd">
+    <td rowspan="1"><b>Control de semántica</b></td>
+    <td>Gestor de metalenguaje (Meta Language Creation)</td>
+    <td>Especifica el significado de palabras y frases para el modelo.</td>
+    <td>Cada vez que escriba "Expln:" explica el concepto escrito a continuación.</td>
+  </tr>
+  
+</table>
+</body>
+</html>
+
