@@ -61,7 +61,7 @@
         .btn-secondary { background-color: #4a5568; color: white; border: none; padding: 8px 15px; border-radius: 4px; cursor: pointer; font-size: 14px; width: 100%; margin-bottom: 5px; }
         .btn-secondary:hover { background-color: #2d3748; }
         
-        /* AJUSTE SÓLO AQUÍ: Contenedor del reproductor Alumno acotado a 640px de ancho y centrado */
+        /* Contenedor del reproductor Alumno acotado a 640px de ancho y centrado */
         #player-container { 
             max-width: 640px; 
             margin: 20px auto 0 auto; 
@@ -69,13 +69,27 @@
             background: #2d3748; 
             border-radius: 8px; 
             overflow: hidden; 
+            position: relative; /* Necesario para posicionar el escudo flotante */
         }
         #video-player { width: 100%; height: 360px; display: block; border: none; }
-        .progress-container { width: 100%; background-color: #4a5568; height: 8px; position: relative; }
+        
+        /* NUEVO: Escudo invisible para bloquear clics directos sobre el iframe de YouTube */
+        .video-shield {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 360px;
+            z-index: 10;
+            background: transparent;
+            cursor: default;
+        }
+
+        .progress-container { width: 100%; background-color: #4a5568; height: 8px; position: relative; z-index: 20; }
         .progress-bar { width: 0%; height: 100%; background-color: #3182ce; transition: width 0.2s linear; }
 
         /* Panel de controles */
-        .controls-panel { display: flex; gap: 10px; background: #2d3748; padding: 12px; justify-content: center; flex-wrap: wrap; }
+        .controls-panel { display: flex; gap: 10px; background: #2d3748; padding: 12px; justify-content: center; flex-wrap: wrap; position: relative; z-index: 20; }
         .btn-control { padding: 8px 16px; border: none; border-radius: 4px; font-weight: bold; cursor: pointer; font-size: 14px; transition: background 0.2s, color 0.2s; }
         .btn-play-state { background-color: #48bb78; color: white; }
         .btn-play-state:hover { background-color: #38a169; }
@@ -91,13 +105,16 @@
         /* Fullscreen */
         #player-container:fullscreen { width: 100vw; max-width: 100vw; height: 100vh; display: flex; flex-direction: column; justify-content: space-between; background: #1a202c; }
         #player-container:fullscreen #video-player { flex: 1; height: calc(100vh - 80px); }
+        #player-container:fullscreen .video-shield { height: calc(100vh - 80px); }
         #player-container:fullscreen .controls-panel { background: #1a202c; padding: 20px; }
+        
         #player-container:-webkit-full-screen { width: 100vw; max-width: 100vw; height: 100vh; display: flex; flex-direction: column; justify-content: space-between; background: #1a202c; }
         #player-container:-webkit-full-screen #video-player { flex: 1; height: calc(100vh - 80px); }
+        #player-container:-webkit-full-screen .video-shield { height: calc(100vh - 80px); }
 
         .navigation-notice { margin-top: 10px; font-size: 12px; color: #718096; text-align: center; font-style: italic; line-height: 1.4; }
         
-        /* AJUSTE SÓLO AQUÍ: Descripción acotada y centrada igual que el reproductor */
+        /* Descripción acotada y centrada igual que el reproductor */
         #fragment-description { 
             max-width: 640px; 
             margin: 20px auto 0 auto; 
@@ -204,6 +221,8 @@
 
     <div id="player-container">
         <div id="video-player"></div>
+        <div class="video-shield" onclick="alternarReproduccion()"></div>
+        
         <div class="progress-container">
             <div id="dynamic-progress" class="progress-bar"></div>
         </div>
@@ -413,7 +432,7 @@
         if (!player) {
             player = new YT.Player(targetId, {
                 videoId: videoId,
-                playerVars: { 'start': startSecs, 'autoplay': 1, 'controls': 0, 'disablekb': 1, 'rel': 0, 'fs': 1 },
+                playerVars: { 'start': startSecs, 'autoplay': 1, 'controls': 0, 'disablekb': 1, 'rel': 0, 'fs': 0 },
                 events: { 'onStateChange': onPlayerStateChange }
             });
         } else {
