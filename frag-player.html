@@ -11,12 +11,12 @@
         input[type="text"], textarea { width: 100%; padding: 8px; box-sizing: border-box; border: 1px solid #ccc; border-radius: 4px; font-family: Arial, sans-serif; }
         textarea { resize: vertical; min-height: 80px; }
         
-        /* DISEÑO DE DOS COLUMNAS (Modo Maestro) */
+        /* Modo Maestro */
         .workspace-layout { display: flex; gap: 30px; }
         .sidebar-instructions { flex: 1; max-width: 300px; border-right: 1px solid #e2e8f0; padding-right: 25px; }
         .main-editor-form { flex: 2; }
 
-        /* Identidad Visual Frag-Player */
+        /* Frag-Player */
         .brand-container { display: flex; align-items: center; gap: 12px; margin-bottom: 20px; }
         .brand-icon { 
             width: 36px; height: 36px; background: linear-gradient(135deg, #3182ce, #1a365d); 
@@ -29,7 +29,7 @@
         }
         .brand-title { font-size: 24px; font-weight: bold; color: #1a365d; margin: 0; letter-spacing: -0.5px; }
         
-        /* Lista de pasos ordenados */
+        /* Lista */
         .steps-list { list-style: none; padding: 0; margin: 0; }
         .steps-list li { position: relative; padding-left: 30px; margin-bottom: 14px; font-size: 14px; line-height: 1.5; color: #4a5568; }
         .steps-list .step-number { 
@@ -38,14 +38,14 @@
             display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 11px; 
         }
 
-        /* Tiempos H:M:S */
+        /* Tiempos */
         .time-inputs-row { display: flex; gap: 20px; margin-bottom: 15px; }
         .time-group { flex: 1; }
         .hms-container { display: flex; align-items: center; gap: 5px; }
         .input-hms { width: 100%; padding: 8px; text-align: center; border: 1px solid #ccc; border-radius: 4px; font-size: 14px; }
         .time-separator { font-weight: bold; font-size: 18px; color: #718096; }
 
-        /* Consola de Recorte */
+        /* Consola */
         .editor-preview-zone { display: none; margin-top: 15px; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
         .slider-wrapper { background: #edf2f7; padding: 15px; border-top: 2px solid #cbd5e0; }
         .slider-label { font-size: 13px; color: #4a5568; margin-bottom: 8px; font-weight: bold; }
@@ -61,7 +61,7 @@
         .btn-secondary { background-color: #4a5568; color: white; border: none; padding: 8px 15px; border-radius: 4px; cursor: pointer; font-size: 14px; width: 100%; margin-bottom: 5px; }
         .btn-secondary:hover { background-color: #2d3748; }
         
-        /* Contenedor del reproductor Alumno acotado a 640px de ancho y centrado */
+        /* Contenedor */
         #player-container { 
             max-width: 640px; 
             margin: 20px auto 0 auto; 
@@ -73,7 +73,7 @@
         }
         #video-player { width: 100%; height: 360px; display: block; border: none; }
         
-        /* NUEVO: Escudo invisible para bloquear clics directos sobre el iframe de YouTube */
+        /* Iframe */
         .video-shield {
             position: absolute;
             top: 0;
@@ -88,7 +88,7 @@
         .progress-container { width: 100%; background-color: #4a5568; height: 8px; position: relative; z-index: 20; }
         .progress-bar { width: 0%; height: 100%; background-color: #3182ce; transition: width 0.2s linear; }
 
-        /* Panel de controles */
+        /* Panel */
         .controls-panel { display: flex; gap: 10px; background: #2d3748; padding: 12px; justify-content: center; flex-wrap: wrap; position: relative; z-index: 20; }
         .btn-control { padding: 8px 16px; border: none; border-radius: 4px; font-weight: bold; cursor: pointer; font-size: 14px; transition: background 0.2s, color 0.2s; }
         .btn-play-state { background-color: #48bb78; color: white; }
@@ -114,7 +114,7 @@
 
         .navigation-notice { margin-top: 10px; font-size: 12px; color: #718096; text-align: center; font-style: italic; line-height: 1.4; }
         
-        /* Descripción acotada y centrada igual que el reproductor */
+        /* Descripción */
         #fragment-description { 
             max-width: 640px; 
             margin: 20px auto 0 auto; 
@@ -131,7 +131,7 @@
         #share-section { margin-top: 15px; padding: 10px; background: #e2e8f0; border-radius: 4px; display: none; }
         #share-url { font-size: 12px; width: 100%; font-family: monospace; }
 
-        /* Créditos dinámicos modo alumno */
+        /* Link */
         .app-credits { text-align: center; margin-top: 15px; font-size: 12px; color: #a0aec0; display: none; }
         .app-credits a { color: #3182ce; text-decoration: none; font-weight: bold; }
         .app-credits a:hover { text-decoration: underline; }
